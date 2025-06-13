@@ -7,7 +7,8 @@ def intro(request):
 
 def predict(request):
     """ Handles prediction form and returns scorecard """
-    prediction = None
+    probabilities = None
+    predictions = None
 
     if request.method == 'POST':
         income = float(request.POST.get('income'))
